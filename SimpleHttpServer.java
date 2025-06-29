@@ -16,7 +16,7 @@ public class SimpleHttpServer {
     static class MyHandler implements HttpHandler {
         public void handle(HttpExchange exchange) {
             try {
-                String response = " Hello from Java 21 HTTP Server!";
+                String response = "✅ Hello from Java HTTP Server!";
                 exchange.sendResponseHeaders(200, response.getBytes().length);
                 OutputStream os = exchange.getResponseBody();
                 os.write(response.getBytes());
