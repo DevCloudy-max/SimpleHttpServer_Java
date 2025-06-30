@@ -10,13 +10,13 @@ public class SimpleHttpServer {
         server.createContext("/", new MyHandler());
         server.setExecutor(null);
         server.start();
-        System.out.println("✅ Server started on port 80");
+        System.out.println("Server started on port 80");
     }
 
     static class MyHandler implements HttpHandler {
         public void handle(HttpExchange exchange) {
             try {
-                String response = "✅ Hello from Java HTTP Server!";
+                String response = "Hello from Java 21 HTTP Server!";
                 exchange.sendResponseHeaders(200, response.getBytes().length);
                 OutputStream os = exchange.getResponseBody();
                 os.write(response.getBytes());
